@@ -1,0 +1,3 @@
+	for ($i=$_GET["min"];$i<=$_GET["max"];$i++){
+		echo $i.' : '.$Lundi[$i].'<br />';
+	}

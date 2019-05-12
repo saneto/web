@@ -1,0 +1,46 @@
+.une{
+	position:relative;
+	color:#000000;
+	background-color:#EEEEEE;
+	box-shadow: 2px 2px 2px #777;
+}
+	
+.imageTitre{
+	float:left;
+	width:100px;
+	height:250px;
+	margin-top:10px;
+	margin-left:15px;
+	text-align:center;
+	font-size:8px;
+	color:#bbbbbb
+}
+
+.titre{
+	position:relative;
+	margin-left:130px;
+	color:#0000ff;
+	font-size:20px;
+	margin-top:5px;
+}
+	
+.caracteristiques{
+	position:relative;
+	margin-left:;
+	color:#bbbbbb;
+	font-weight:bold;
+	font-size:8px;
+}
+
+.resume{
+	position:relative;
+	font-size:12px;
+	margin-left:130px;
+}
+
+.articleLie{
+	position:relative;
+	font-size:12px;
+	margin-left:130px;
+	color:#0000ff;
+}

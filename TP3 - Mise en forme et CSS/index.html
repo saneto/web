@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+	<TITLE>CSS3</TITLE>
+	
+</HEAD>
+<BODY LANG="fr" >
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<h1>CSS 3</h1>
+	<ol type="I">
+		<li><a href="#Introduction">Introduction</a></li>
+		<li><a href="#Separation">S&eacute;paration du contenu et de la mise en forme</a></li>
+		<li><a href="#Commentaires">Commentaires</a></li>
+		<li><a href="#Heritages">H&eacute;ritage</a></li>
+		<li><a href="#Differentes">Les diff&eacute;rentes fa&ccedil;on d'&eacute;crire les s&eacute;lecteurs</a></li>
+			<ol type="a"><li><a href="#DivSpan">DIV et SPAN</a></li>
+				<li><a href="#ID">ID et class</a></li>
+				<li><a href="#Modif">Modification d'une partie d'une balise classique</a></li></ol>
+		<li><a href="#Positionnement">Positionnement</a></li>
+			<ol type="a"><li><a href="#Relatif">Positionnement relatif</a></li>
+				<li><a href="#Absolu">Positionnement absolu et fixe</a></li>
+				<li><a href="#Flottant">Positionnement flottant</a></li></ol>
+		<li><a href="#Modeles">Le mod&egrave;le des	boites (box model)</a></li>
+		<li><a href="#SelecteursClassiques">Quelques s&eacute;lecteurs classiques</a></a></li>
+			<ol type="a"><li><a href="#Formatage">Formatage de texte</a></li>
+				<li><a href="#Couleur">Propri&eacute;t&eacute; de couleur et de fond</a></li>
+				<li><a href="#Boites">Propri&eacute;t&eacute; de boite</a></li>
+				<li><a href="#Affichage">Propri&eacute;t&eacute; de positionnement et d'affichage</a></li>
+				<li><a href="#Autres">Autres propri&eacute;t&eacute;s</a></li></ol>
+	</ol>
+
+<ol type="I">
+<li><h1><a id="Introduction">Introduction</a></h1><BR/><p>
+Nous avons vu ensemble lors des premiers Tps de HTML des balises
+qui sont d&eacute;sormais obsol&egrave;tes en HTML5 voir m&ecirc;me
+en xhtml 1.0.<BR/><BR/>
+Par exemple&nbsp;:</li>
+</p>
+
+<li><h1><a id="Separation">S&eacute;paration du contenu et de la mise en forme</a></h1><BR/><p>
+Depuis maintenant quelques ann&eacute;es, la s&eacute;paration du
+contenu et de la mise en forme du document est devenu une r&egrave;gle
+dans la cr&eacute;ation de pages webs. C&rsquo;est pour cela qu&rsquo;&agrave;
+partir d'aujourd'hui, les mises en formes de type CSS vont se trouver
+dans un o&ugrave; plusieurs fichiers CSS (extension .css) et seront
+appel&eacute;s par la page HTML correspondante avec l'instruction
+suivante qui sera &agrave; placer dans le &lt;head&gt;<BR/><BR/>
+
+&lt;link rel=''stylesheet'' type=''text/css'' href=''style.css''&gt;<BR/><BR/>
+
+Le param&egrave;tre de type est facultatif en HTML5
+De la m&ecirc;me fa&ccedil;on que l'on va pouvoir utiliser
+plusieurs feuilles de style dans un m&ecirc;me fichier HTML, il sera
+possible d'utiliser plusieurs fois la m&ecirc;me feuille de style
+dans plusieurs fichiers HTML, d&rsquo;o&ugrave; un gain de
+productivit&eacute; une fois ses feuilles de style pr&eacute;par&eacute;es.<BR/><BR/>
+
+Dans une feuille style, la format adapt&eacute; est tr&egrave;s
+simple et bien d&eacute;fini, il prend toujours la forme :<BR/><BR/>
+S&eacute;lecteur { propri&eacute;t&eacute; : valeur ; }<BR/><BR/>
+Exemple :</li>
+</p>
+
+<li><h1><a id="Commentaires">Commentaires</a></h1><BR/><p>
+Contrairement au HTML pour lequel les commentaires sont de la
+forme :<BR/><BR/>
+et doivent forc&eacute;ment tenir sur une seule et unique ligne,
+pour le CSS, les commentaires prennent la forme :<BR/><BR/>
+et peuvent englober plusieurs lignes en une seule fois.</li>
+</p>
+
+<li><h1><a id="Heritages">H&eacute;ritage</a></h1><BR/><p>
+Les feuilles de style sont en cascade, comme le dit leur nom
+(Cascading Style Sheet) ce qui implique un h&eacute;ritage des
+propri&eacute;t&eacute;s.<BR/><BR/>
+Un exemple explique mieux que les mots donc pour une page cod&eacute;es
+comme cela :
+
+<table border=1>
+	<tr><td>&lt;!DOCTYPE
+			html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;<BR/>
+			&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;<BR>&lt;html&gt;<BR>	&lt;head&gt;<BR>		&lt;title&gt;H&eacute;ritage&lt;/title&gt;<BR>		&lt;meta
+			http-equiv=&quot;Content-Type&quot; content=&quot;text/html;
+			charset=UTF-8&quot; /&gt;<BR>		&lt;link rel=&quot;stylesheet&quot;
+			type=&quot;text/css&quot; href=&quot;style.css&quot;
+			/&gt;<BR>	&lt;/head&gt;<BR>	&lt;body&gt;<BR>		&lt;h1&gt;L'h&eacute;riage&lt;/h1&gt;<BR>		&lt;p&gt;<BR>			L'h&eacute;ritage
+			fait que ce texte est en italic et en
+			bleu.<BR>		&lt;/p&gt;<BR>	&lt;/body&gt;<BR>&lt;/html&gt;</td>
+	<td>Fichier style.css<BR/><BR/>
+			body
+			{<BR/>
+			color: #FF0000;<BR/>
+			font-style: italic;<BR/>
+			}<BR/>
+			p
+			{<BR/>
+			color: #0000FF;<BR/>
+			}<BR/></td></tr>
+			</table><BR/><BR/>
+R&eacute;sultat :<BR/>
+Pour le texte, cela se voit tr&egrave;s rapidement, mais en ce qui
+concerne la mise en page, l'h&eacute;ritage peut &ecirc;tre beaucoup
+plus probl&eacute;matique, comme par exemple avec les marges, le
+padding ou encore les bordures qui peuvent &ecirc;tre invisibles et
+donc pas forc&eacute;ment r&eacute;parties comme voulue.</li>
+</p>
+
+<li><h1><a id="Differentes">Les diff&eacute;rentes fa&ccedil;on d'&eacute;crireles s&eacute;lecteurs</a></h1><BR/><p>
+
+En css, nous avons pour le moment vu uniquement comme s&eacute;lecteur
+les balises HTML classiques, mais heureusement, il va &ecirc;tre
+possible de rajouter des balises, ou encore de modifier les balises
+classiques pour une prise en compte uniquement dans certains cas.<BR/><BR/>
+
+<ol type="a">
+</p><p>
+<li><h2><a id="DivSpan">DIV et SPAN</a></h2><BR/><BR/><p>
+Nous avons parl&eacute; de DIV et SPAN dans le cours de HTML,
+quelle est la diff&eacute;rence entre ces deux balises :<BR/><BR/><BR/>
+Pour la mise en forme, nous allons donc utiliser les balises DIV
+et SPAN de fa&ccedil;on diff&eacute;rente, comme nous le verrons dans
+le TP, mais il nous faut voir comment associer un style &agrave; ces
+balises.<BR/><BR/>
+Rappel sur les &eacute;l&eacute;ments de type boite et de type
+en-ligne :<BR/><BR/>
+Les principaux &eacute;l&eacute;ments cr&eacute;ant des bo&icirc;tes
+bloc sont :<BR/>
+<ul>
+<li>l'&eacute;l&eacute;ment <CODE>div</CODE>
+	; </li>
+	<li>les titres <CODE>h1</CODE>, <CODE>h2</CODE>,
+	<CODE>h3</CODE>, <CODE>h4</CODE>, <CODE>h5</CODE>, <CODE>h6</CODE> ;</li>
+		
+	<li>le paragraphe <CODE>p</CODE> ; </li>
+	<li>Les listes et &eacute;l&eacute;ments
+	de liste <CODE>ul</CODE>, <CODE>ol</CODE>, <CODE>li</CODE>, <CODE>dl</CODE>,
+	<CODE>dd</CODE> ; </li>
+	<li>Le bloc de citation <CODE>blockquote</CODE>
+	; </li>
+	<li>Le texte pr&eacute;-format&eacute;
+	<CODE>pre</CODE> ; </li>
+	<li>L'adresse <CODE>address</CODE>. </li>
+</ul>	
+<br/><br/>
+Les principaux &eacute;l&eacute;ments cr&eacute;ant des bo&icirc;tes
+en ligne sont :
+<ul>
+<li>l'&eacute;l&eacute;ment <CODE>span</CODE>
+	; </li>
+	<li>le lien <CODE>a</CODE> ; </li>
+	<li>L'image <CODE>img</CODE> ; </li>
+	<li>Les emphases <CODE>em</CODE> et
+	<CODE>strong</CODE> ; </li>
+	<li>La citation <CODE>q</CODE> ; </li>
+	<li>La citation <CODE>cite</CODE> ; </li>
+	<li>L'&eacute;l&eacute;ment <CODE>code</CODE>
+	; </li>
+	<li>Le texte entr&eacute; par
+	l'utilisateur <CODE>kbd</CODE> ; </li>
+	<li>L'exemple <CODE>samp</CODE> ; </li>
+	<li>La variable <CODE>var</CODE> ; </li>
+	<li>Les abr&eacute;viations et
+	acronymes <CODE>abbr</CODE>, <CODE>acronym</CODE> ; </li>
+	<li>Le texte ins&eacute;r&eacute; <CODE>ins</CODE>
+	; </li>
+	<li>Le texte supprim&eacute; <CODE>del</CODE>. </li>
+	</li>
+</ul>
+</p>
+	<li><h2><a id="ID">ID et class</a></h2><p><p>
+	A ces deux balises, on va chercher &agrave; rajouter un style
+particulier, qui ne correspond pas au style de base, puisque l'on ne
+peut pas modifier toutes les balises de type span ou de type div dans
+notre fichier css sans quoi on n&rsquo;obtiendra pas la flexibilit&eacute;
+d&eacute;sir&eacute;e. C'est pour cela que l'on va cr&eacute;er des
+s&eacute;lecteurs personnalis&eacute;s que l'on utilisera comme bon
+nous semble. <br/>
+Les Ids sont utilis&eacute;s pour d&eacute;signer des &eacute;l&eacute;ments
+uniques dans le document, et concernent donc bien souvent un div et
+non pas un span qui lui va plut&ocirc;t utiliser une classe. Les
+classes permettent au style d'&ecirc;tre utilis&eacute; plusieurs
+fois et vont donc souvent servir pour la mise en forme de certains
+morceaux de texte dans la page, et cela de fa&ccedil;on r&eacute;p&eacute;t&eacute;e,
+comme par exemple changer la couleur d'un groupe de lien, ou encore
+celle d'une partie du texte.<br/><br/>
+Voyons cela sur un exemple concret :<br/><br/>
+Ceci  est un extrait du site du monde :<br/><br/>
+</p>
+</li>
+</ol>
+</BODY>
+</HTML>

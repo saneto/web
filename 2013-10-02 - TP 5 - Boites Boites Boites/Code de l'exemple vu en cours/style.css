@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contenu {	width:1000px;
+			margin:auto;}
+			
+#menu {	height:100px;
+background-color:grey;}
+
+#pub1{	width:200px;
+		height:800px;
+		float:left;
+		background-color:blue;}
+		
+#text1,#text2{	width:500px;
+				height:300px;
+				float:left;
+				background-color:yellow;}
+				
+#pub2 {		width:300px;
+			height:800px;
+			float:right;
+			background-color:pink;}
+			
+#credits {background-color:green;
+			width:500px;
+			height:150px;
+			float:right;}

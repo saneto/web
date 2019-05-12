@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contenu {
+	width:1000px;
+	margin:auto;
+	background-color:blue;
+	overflow:hidden;
+}
+			
+#Vert {
+	height:200px;
+	background-color:green;
+}
+
+#Jaune{
+	width:150px;
+	height:50px;
+	margin-top:20px;
+	margin-right:25px;
+	background-color:yellow;
+	float:right;
+}	
+	
+#Bleu{
+	height:450px;
+	width:250px;
+	float:left;
+	background-color:blue;
+}
+		
+#Violet{
+	margin-left:250px;
+	height:100px;
+	background-color:purple;
+	position:relative;
+}
+				
+#Rouge{
+	min-height:350px;
+	margin-left:250px;
+	background-color:red;
+	position:relative;
+}
